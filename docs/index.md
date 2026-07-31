@@ -2,14 +2,21 @@
 layout: home
 
 hero:
-  name: My Blog
-  text: Welcome to my blog
+  name: blissky | Blog
+  text: Notes on software, tools, and experiments
   actions:
     - theme: brand
-      text: Read hello world
-      link: /posts/hello-world
+      text: Browse posts
+      link: /toc/
+    - theme: alt
+      text: Browse tags
+      link: /tags/
 ---
 
-## Articles
+<script setup>
+import PostIndex from './.vitepress/components/PostIndex.vue'
+</script>
 
-- [hello world](/posts/hello-world)
+## Latest posts
+
+<PostIndex view="latest" />
